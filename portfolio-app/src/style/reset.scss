@@ -27,3 +27,14 @@ h6 {
 p:last-child {
   margin-bottom: 0;
 }
+
+input.mat-number-input::-webkit-outer-spin-button,
+input.mat-number-input::-webkit-inner-spin-button {
+  display: none;
+}
+input.mat-number-input {
+  -moz-appearance: textfield;
+}
+table {
+  width: 100%;
+}

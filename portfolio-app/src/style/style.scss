@@ -1,30 +1,93 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@import "~@angular/material/theming";
 // Mixin for pre defined class
 @import "./mixin.scss";
 @import "./reset.scss";
 @import "./color.scss";
+html,
+body {
+  height: 100%;
+  background-color: map-get($blue-map, "dark");
+}
+.wide-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.text-truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.float-left {
+  float: left;
+}
+.display-block {
+  display: block;
+}
+.display-inline {
+  display: inline;
+}
+.display-inline-block {
+  display: inline-block;
+}
 
-// Plus imports for other components in your app.
+.italic {
+  font-style: italic !important;
+}
+.clearfix {
+  overflow: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.border-1 {
+  border: 1px solid;
+}
+.border-top-1 {
+  border-top: 1px solid;
+}
+.border-bottom-1 {
+  border-bottom: 1px solid;
+}
+.border-left-1 {
+  border-left: 1px solid;
+}
+.border-right-1 {
+  border-right: 1px solid;
+}
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$portfolio-app-primary: mat-palette($primary);
-$portfolio-app-accent: mat-palette($accent);
-
-// The warn palette is optional (defaults to red).
-$portfolio-app-warn: mat-palette($warn);
-
-// Create the theme object (a Sass map containing all of the palettes).
-$portfolio-app-theme: mat-light-theme($portfolio-app-primary, $portfolio-app-accent, $portfolio-app-warn);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($portfolio-app-theme);
+.bg-blue-light {
+  background-color: map-get($blue-map, "light");
+}
+.bg-blue-medium {
+  background-color: map-get($blue-map, "medium");
+}
+.bg-blue-dark {
+  background-color: map-get($blue-map, "dark");
+}
+.text-muted-light {
+  color: map-get($white-map, "light");
+}
+.text-muted-medium {
+  color: map-get($white-map, "medium");
+}
+.text-deep-dark {
+  color: map-get($white-map, "dark");
+}
+.primary-text-color-light {
+  color: map-get($elephant-map, "light");
+}
+.primary-text-color-medium {
+  color: map-get($elephant-map, "medium");
+}
+.primary-text-color-dark {
+  color: map-get($elephant-map, "dark");
+}
+.border-color {
+  border-color: map-get($elephant-map, "dark");
+}
